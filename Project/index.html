@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD de Estudiantes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>CRUD de Estudiantes</h1>
+
+    <!-- Formulario para agregar estudiante -->
+    <form id="studentForm">
+        <input type="text" id="name" placeholder="Nombre del estudiante" required>
+
+        <!-- Input para edad actualizado -->
+        <input type="number" id="age" placeholder="Edad" min="0" max="100" required>
+
+        <!-- Dropdown para curso favorito -->
+        <select id="course" required>
+            <option value="" disabled selected>Selecciona tu curso favorito</option>
+            <option value="Matemáticas">Matemáticas</option>
+            <option value="Ciencias">Ciencias</option>
+            <option value="Historia">Historia</option>
+            <option value="Arte">Arte</option>
+            <option value="Deportes">Deportes</option>
+        </select>
+
+        <button type="submit">Agregar Estudiante</button>
+    </form>
+
+    <!-- Tabla para mostrar estudiantes -->
+    <table>
+        <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Curso Favorito</th>
+            <th>Acciones</th>
+        </tr>
+        </thead>
+        <tbody id="studentTable">
+        <!-- Aquí se llenará dinámicamente -->
+        </tbody>
+    </table>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
